@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Booking</title>
+    <style>
+        /* Attractive Background with Gradient Animation */
+        body 
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6ec7, #ff9900, #00c6ff, #00ff99);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* Form styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Ticket Booking</h1>
+        <form id="bookingForm" onsubmit="return submitForm(event)">
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required onkeypress="if(event.keyCode==13) submitForm(event)">
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required onkeypress="if(event.keyCode==13) submitForm(event)">
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Journey:</label>
+                <input type="date" id="date" name="date" required onkeypress="if(event.keyCode==13) submitForm(event)">
+            </div>
+            <div class="form-group">
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" name="passengers" min="1" max="6" required onkeypress="if(event.keyCode==13) submitForm(event)">
+            </div>
+            <div class="form-group">
+                <label for="busType">Bus Type:</label>
+                <select id="busType" name="busType" required onkeypress="if(event.keyCode==13) submitForm(event)">
+                    <option value="">Select Bus Type</option>
+                    <option value="ac">AC</option>
+                    <option value="nonac">Non-AC</option>
+                    <option value="sleeper">Sleeper</option>
+            <div class="form-group">
+                <label for="Enter"></label>
